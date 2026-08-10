@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #aec4cf;
+    font-family: system-ui;
+    margin: 0;
+    min-height: 100vh; 
+    overflow-y: auto;
+}
+
+:root{
+    --green: #10B981;
+    --grey: rgb(185, 182, 182);
+}
+
+h1{
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    margin: 0 0 0.5rem 0;
+}
+
+h1 .top{
+    color : white;
+}
+
+h1 .bottom{
+    color: var(--green);
+}
+
+p{
+    font-size: clamp(1.1rem, 2vw, 1.6rem);
+    color: var(--grey);
+}
+
+.very-main{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(0.75rem, 2vw, 2rem);
+}
+
+button{
+    background-color: var(--green);
+    border: none;
+    min-height: 2.8rem;
+    width: min(15rem, 100%);
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: white;
+    font-family: system-ui;
+    border-radius: 0.5rem;
+    margin: 0.8rem 0;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out 0s;
+}
+button:hover{
+    transform: scale(1.03);
+}
+
+.main{
+    background-color: #1F2937;
+    width: min(30rem, 88vw);
+    margin: auto;
+    border: 0.4rem solid var(--green);
+    border-radius: 2vh;
+    padding: clamp(1.2rem, 3vw, 4rem);
+}
+
+.box{
+    flex: 1 1 0;
+    min-width: 0;
+    height: clamp(2.2rem, 4vh, 3.2rem);
+    background-color: #273549;
+    border-radius: 0.5vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    overflow-wrap: anywhere;
+    font-size: clamp(0.85rem, 1.6vw, 1.1rem);
+}
+
+.boxes{
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+hr{
+    color: var(--grey);
+}
+
+@media (max-width: 900px) {
+    .main {
+        width: min(90%, 28rem);
+    }
+}
+
+@media (max-width: 600px) {
+    .very-main {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .main {
+        width: min(100%, 22rem);
+        padding: 1.2rem;
+    }
+
+    .boxes {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    button {
+        width: 100%;
+        margin: 0.7rem 0;
+    }
+}
